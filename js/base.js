@@ -19,6 +19,8 @@
 
                     // Revoke ObjectURL
                     URL.revokeObjectURL(imgURL);
+                    console.log(imgURL);
+                    
                 }
                 catch (e) {
                     try {
