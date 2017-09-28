@@ -1,7 +1,7 @@
 (function () {
     var takePicture = document.querySelector("#take-picture"),
         showPicture = document.querySelector("#show-picture");
-
+        imageURL = document.querySelector("#imageURL");
     if (takePicture && showPicture) {
         // Set events
         takePicture.onchange = function (event) {
@@ -19,8 +19,8 @@
 
                     // Revoke ObjectURL
                     URL.revokeObjectURL(imgURL);
-                    console.log(imgURL);
-                    
+                    imageURL.innerHTML(imgURL);
+
                 }
                 catch (e) {
                     try {
