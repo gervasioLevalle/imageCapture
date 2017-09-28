@@ -16,10 +16,10 @@
 
                     // Set img src to ObjectURL
                     showPicture.src = imgURL;
-
+                    console.log(imgURL);
                     imageURL.innerHTML(imgURL);
                     // Revoke ObjectURL
-                    URL.revokeObjectURL(imgURL);
+                    //URL.revokeObjectURL(imgURL);
                     
 
                 }
