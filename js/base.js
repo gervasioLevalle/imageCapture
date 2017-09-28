@@ -18,6 +18,7 @@
                     // Set img src to ObjectURL
                     showPicture.src = imgURL;
                     console.log(imgURL);
+                    console.log("file:"+file);
                     imageURL.value(imgURL);
                     // Revoke ObjectURL
                     //URL.revokeObjectURL(imgURL);
