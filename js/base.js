@@ -17,9 +17,10 @@
                     // Set img src to ObjectURL
                     showPicture.src = imgURL;
 
+                    imageURL.innerHTML(imgURL);
                     // Revoke ObjectURL
                     URL.revokeObjectURL(imgURL);
-                    imageURL.innerHTML(imgURL);
+                    
 
                 }
                 catch (e) {
