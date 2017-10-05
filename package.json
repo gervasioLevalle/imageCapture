@@ -1,0 +1,23 @@
+{
+  "name": "faceapi",
+  "version": "1.0.0",
+  "description": "Captura de imagen",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gervasiol/imageCapture.git"
+  },
+  "author": "GL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gervasiol/imageCapture/issues"
+  },
+  "homepage": "https://github.com/gervasiol/imageCapture#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.1"
+  }
+}

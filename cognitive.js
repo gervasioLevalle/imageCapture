@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Detect Faces Sample</title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-</head>
-<body>
-
-<script type="text/javascript">
+    function processImage(inputImage) {
         // **********************************************
         // *** Update or verify the following values. ***
         // **********************************************
 
         // Replace the SUBSCRIPTIONKEY string value with your valid subscription key.
-        const SUBSCRIPTIONKEY = "ae720e69309a454981070ae9f07a0ef7";
+        var SUBSCRIPTIONKEY = "ae720e69309a454981070ae9f07a0ef7";
 
         // Replace or verify the region.
         //
@@ -22,11 +14,8 @@
         //
         // NOTE: Free trial subscription keys are generated in the westcentralus region, so if you are using
         // a free trial subscription key, you should not need to change this region.
-        const URIBASE = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
-        const URIBASEVERIFY = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/verify";
-
-
-    function processImage(inputImage) {
+        var URIBASE = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect";
+        var URIBASEVERIFY = "https://westcentralus.api.cognitive.microsoft.com/face/v1.0/verify";
         
         // Request parameters.
         var params = {
@@ -131,44 +120,3 @@
         });
     };
 
-
-</script>
-
-<h1>Hackathon Verify Identity:</h1>
-Seleccione la imagen Base y la imagen a comparar(Identity) luego<strong>Verify Identity</strong> button.
-<br><br>
-Captura imagen
-<input type="file" id="take-picture" accept="image/*">
-<br><br>
-
-Imagen Base: <input type="text" name="inputImageBase" id="inputImageBase" value="" />
-<button onclick="processImage('Base')">Cargar</button>
-<input type="hidden" name="hiddenBaseFaceId" id="hiddenBaseFaceId" value="">
-<br><br>
-Imagen Indentity: <input type="text" name="inputImageIdentity" id="inputImageIdentity" value="" />
-<button onclick="processImage('Identity')">Cargar</button>
-<input type="hidden" name="hiddenIdentityFaceId" id="hiddenIdentityFaceId" value="">
-<br><br>
-<button onclick="checkIdentity()">Verificar</button>
-<br><br>
-
-<div id="wrapper" style="width:1020px; display:table;">
-    <div id="jsonOutput" style="width:600px; display:table-cell;">
-        Response:
-        <br><br>
-        <textarea id="responseTextArea" class="UIInput" style="width:580px; height:400px;"></textarea>
-    </div>
-    <div id="imageDiv" style="width:410px; display:table-cell;">
-        Imagen Base:
-        <br><br>
-        <img id="sourceImageBase" width="400" />
-    </div>
-    <div id="imageDiv" style="width:410px; display:table-cell;">
-        Imagen Identity:
-        <br><br>
-        <img id="sourceImageIdentity" width="400" />
-    </div>
-
-</div>
-</body>
-</html>
